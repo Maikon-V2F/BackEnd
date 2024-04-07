@@ -1,0 +1,19 @@
+{
+  "name": "backend-i",
+  "version": "1.0.0",
+  "description": "BackEnd make with Node",
+  "main": "app.ja",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maikon-V2F/BackEnd-i.git"
+  },
+  "author": "Maikon Franco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maikon-V2F/BackEnd-i/issues"
+  },
+  "homepage": "https://github.com/Maikon-V2F/BackEnd-i#readme"
+}
