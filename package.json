@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Maikon-V2F/BackEnd-i/issues"
   },
-  "homepage": "https://github.com/Maikon-V2F/BackEnd-i#readme"
+  "homepage": "https://github.com/Maikon-V2F/BackEnd-i#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
 }
