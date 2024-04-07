@@ -9,8 +9,9 @@ module.exports = {
     // Configurações de regras do estilo Google
     'indent': ['error', 2],
     'quotes': ['error', 'single'],
-    'linebreak-style': ['error', 'windows']
-      
+    'linebreak-style': ['error', 'windows'],
+    'new-cap': 0      
   },
 };
   
+//use command npm run lint -- --fix
