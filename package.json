@@ -4,7 +4,7 @@
   "description": "BackEnd make with Node",
   "main": "app.js",
   "scripts": {
-    "lint": "eslint . --config C:\\Users\\maiko\\Documents\\Projects\\Andamento\\BackEnd-i\\.eslintrc.js --ignore-pattern node_modules/",
+    "lint": "eslint . --config .\\.eslintrc.js --ignore-pattern node_modules/",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
   ,
