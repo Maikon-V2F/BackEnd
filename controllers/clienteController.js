@@ -1,4 +1,4 @@
-const clienteService = require('../services/clienteModel');
+const clienteService = require('../services/clienteService');
 
 const findAll = async (request, response) => {
     const clientes = await clienteService.findAll();
