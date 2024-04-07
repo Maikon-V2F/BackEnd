@@ -6,12 +6,12 @@ require('../controllers/produtoController');
 //middlewares
 const nomeMiddleware = require('../middlewares/nomeMiddleware');
 const descricaoiddleware = require('../middlewares/descricaoMiddleware');
-const precoMiddleware = require('../middlewares/idadeMiddleware');
+const precoMiddleware = require('../middlewares/precoMiddleware');
 
 /* GET produtos*/
 router.get('/', produtoController.findAll);
 /* POST produtos*/
-router.post('/', nomeMiddleware.validateName, descricaoiddleware.validateDescription, precoMiddleware.validateAge, produtoController.save);
+router.post('/', nomeMiddleware.validateName, descricaoiddleware.validateDescription, precoMiddleware.validatePrice, produtoController.save);
 
 /* PUT produtos*/
 router.put('/', produtoController.update);
