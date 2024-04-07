@@ -9,4 +9,4 @@ app.get('/', function (req, res) {
 // Imprima URL para acessar o servidor
 app.listen(8000, function () {
  console.log('App ouvindo na porta 8000!')
-}) 
+})
