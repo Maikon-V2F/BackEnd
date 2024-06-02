@@ -2,7 +2,8 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var morgan = require('morgan'); // Importar morgan
+var logger = require('./logger'); // Atualizado para usar o logger personalizado
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -12,7 +13,6 @@ const clientesRouter = require('./routes/clientes');
 var app = express();
 
 const dotenv = require('dotenv');
-
 dotenv.config();
 console.log(process.env.MYSQL_DB);
 
@@ -20,7 +20,7 @@ console.log(process.env.MYSQL_DB);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(logger('dev'));
+app.use(morgan('dev')); // Usar morgan para logs HTTP
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
