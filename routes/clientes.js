@@ -7,17 +7,18 @@ const nomeMiddleware = require('../middlewares/nomeMiddleware');
 const sobrenomeMiddleware = require('../middlewares/sobrenomeMiddleware');
 const idadeMiddleware = require('../middlewares/idadeMiddleware');
 const emailMiddleware = require('../middlewares/emailMiddleware');
+const verifyToken = require('../middlewares/verifyToken');
 
 /* GET clientes */
-router.get('/', clienteController.findAll);
+router.get('/', verifyToken, clienteController.findAll);
 
 /* POST clientes */
-router.post('/', nomeMiddleware.validateName, sobrenomeMiddleware.validateFamilyName, emailMiddleware.validateEmail, idadeMiddleware.validateAge, clienteController.save);
+router.post('/', verifyToken, nomeMiddleware.validateName, sobrenomeMiddleware.validateFamilyName, emailMiddleware.validateEmail, idadeMiddleware.validateAge, clienteController.save);
 
 /* PUT clientes */
-router.put('/', clienteController.update);
+router.put('/', verifyToken, clienteController.update);
 
 /* DELETE clientes */
-router.delete('/:id', clienteController.remove);
+router.delete('/:id', verifyToken,  clienteController.remove);
 
 module.exports = router;

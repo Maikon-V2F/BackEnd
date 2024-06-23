@@ -22,7 +22,7 @@ const remove = async (id) => {
   const isOk = await (await connection).execute(query, [id]);
   return isOk[0].affectedRows === 1;
 }
-
+ 
 module.exports = {
   findAll, save, remove, update
 };
